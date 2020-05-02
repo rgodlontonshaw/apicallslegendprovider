@@ -1,5 +1,6 @@
 import 'package:apicallslegend/providers/ChuckyJokeProvider.dart';
 import 'package:apicallslegend/providers/ChuckyProvider.dart';
+import 'package:apicallslegend/utils/commons.dart';
 import 'package:apicallslegend/view/init/InitializeProviderDataScreen.dart';
 import 'package:apicallslegend/view/login/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -40,6 +41,7 @@ class _MyAppState extends State<MyApp> {
         ],
         child: MaterialApp(
             title: 'Api Calls like a Legend with Provider',
+            theme: chuckyTheme,
             home: SplashScreen()));
   }
 
@@ -48,6 +50,13 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
 }
+
+final chuckyTheme = ThemeData(
+  primaryColor: Commons.mainAppColor,
+  accentIconTheme: IconThemeData(color: Colors.black),
+  fontFamily: 'Roboto',
+  hintColor: Commons.hintColor,
+);
 
 class SplashScreen extends StatefulWidget {
   @override

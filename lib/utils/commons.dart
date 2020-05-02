@@ -19,7 +19,10 @@ class Commons {
   static const mainAppFontColor = const Color(0xFF4D0F29);
   static const appBarBackGroundColor = const Color(0xFF4D0F28);
   static const categoriesBackGroundColor = const Color(0xFFA8184B);
+  static const hintColor = const Color(0xFF4D0F29);
+  static const mainAppColor = const Color(0xFF4D0F29);
   static const gradientBackgroundColorStart = const Color(0xFF4D0F29);
+  static const popupItemBackColor = const Color(0xFFDADADB);
 
   static Widget chuckyLoader() {
     return Center(child: SpinKitFoldingCube(
@@ -31,6 +34,26 @@ class Commons {
         );
       },
     ));
+  }
+
+  static void showError(BuildContext context, String message) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+              title: Text(message),
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(15)),
+              actions: <Widget>[
+                FlatButton(
+                  child: Text("Ok"),
+                  textColor: Colors.black,
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            ));
   }
 
   static Widget chuckyLoading(String message) {
