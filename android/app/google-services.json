@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "26842857311",
+    "firebase_url": "https://api-calls-legend.firebaseio.com",
+    "project_id": "api-calls-legend",
+    "storage_bucket": "api-calls-legend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26842857311:android:017040460be8a62842c0ea",
+        "android_client_info": {
+          "package_name": "com.godlonton.apicallslegend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26842857311-50om44s2nk14mar0t8qolmnnf8mnf1p8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp_2WRHgXIbT24Mp6wHw5tpsZ7JP8vUXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26842857311-50om44s2nk14mar0t8qolmnnf8mnf1p8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
