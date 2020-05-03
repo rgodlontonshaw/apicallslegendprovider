@@ -2,12 +2,9 @@ import 'package:apicallslegend/view/login/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:apicallslegend/utils/commons.dart';
-import 'package:apicallslegend/utils/widget/bezierContainer.dart';
+import 'package:apicallslegend/utils/shape/bezierContainer.dart';
 
 class RegisterPage extends StatefulWidget {
-  RegisterPage({Key key, this.title}) : super(key: key);
-  final String title;
-
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -143,9 +140,8 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget _registerButton() {
     return isLoading
         ? Center(
-            child: CircularProgressIndicator(
-            valueColor: new AlwaysStoppedAnimation<Color>(Commons.mainAppColor),
-          ))
+            child: Commons.chuckyLoading("Registering new user..."),
+          )
         : GestureDetector(
             onTap: () async {
               if (_formPageKey.currentState.validate()) {

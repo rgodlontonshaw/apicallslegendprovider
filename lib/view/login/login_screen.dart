@@ -2,7 +2,7 @@ import 'package:apicallslegend/view/init/InitializeProviderDataScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:apicallslegend/utils/commons.dart';
-import 'package:apicallslegend/utils/widget/bezierContainer.dart';
+import 'package:apicallslegend/utils/shape/bezierContainer.dart';
 import 'package:apicallslegend/view/login/register.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
@@ -101,9 +101,8 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget _loginButton() {
     return isLoading
         ? Center(
-            child: CircularProgressIndicator(
-            valueColor: new AlwaysStoppedAnimation<Color>(Commons.mainAppColor),
-          ))
+            child: Commons.chuckyLoading("Loggin in..."),
+          )
         : GestureDetector(
             onTap: () async {
               if (_formPageKey.currentState.validate()) {

@@ -2,7 +2,7 @@ import 'package:apicallslegend/models/chuck_response.dart';
 import 'package:apicallslegend/utils/commons.dart';
 import 'package:apicallslegend/providers/ChuckyJokeProvider.dart';
 import 'package:apicallslegend/utils/error.dart';
-import 'package:apicallslegend/utils/widget/BottomWave.dart';
+import 'package:apicallslegend/utils/shape/BottomWave.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
