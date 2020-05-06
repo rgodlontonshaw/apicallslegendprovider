@@ -7,6 +7,12 @@ A Legendary Provider Flutter application.
 
 # APICALLSLEGEND ![Flutter logo][]
 
+### Screenshots
+
+<img src="assets/screenshots/screenshot1.jpg" height="600em" /> <img src="assets/screenshots/screenshot2.jpg" height="600em" />
+<img src="assets/screenshots/screenshot3.jpg" height="600em" /> <img src="assets/screenshots/screenshot4.jpg" height="600em" />
+<img src="assets/screenshots/screenshot5.jpg" height="600em" /> <img src="assets/screenshots/screenshot6.jpg" height="600em" />
+
 Chuck Norris - API Flutter Calls Tutorial Like a Legend
 
 Demo app to showcase the use of Flutter API calls using Provider.
