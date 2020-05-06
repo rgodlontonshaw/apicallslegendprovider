@@ -5,7 +5,7 @@ A Legendary Provider Flutter application.
 <img src="https://img.shields.io/badge/made%20with-dart-blue.svg" alt="made with dart">
 <img src="https://img.shields.io/badge/version-1.0.0-orange.svg" alt="1.0.0">
 
-# APICALLSBOSS [![Flutter logo][]
+# APICALLSLEGEND [Flutter logo][]
 
 Chuck Norris - API Flutter Calls Tutorial Like a Legend
 
