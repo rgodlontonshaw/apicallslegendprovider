@@ -7,10 +7,10 @@ import 'package:provider/provider.dart';
 
 class GetChuckCategories extends StatefulWidget {
   @override
-  _GetShaftsState createState() => _GetShaftsState();
+  _GetChuckyState createState() => _GetChuckyState();
 }
 
-class _GetShaftsState extends State<GetChuckCategories> {
+class _GetChuckyState extends State<GetChuckCategories> {
   ChuckCategories chuckCategories;
 
   @override
