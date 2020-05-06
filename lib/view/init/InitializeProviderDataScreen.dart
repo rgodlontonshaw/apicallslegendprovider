@@ -13,33 +13,35 @@ class InitializeProviderDataScreen extends StatefulWidget {
 class InitializeProvidersState extends State<InitializeProviderDataScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: FutureBuilder<ChuckCategories>(
-        future: Provider.of<ChuckyProvider>(context, listen: false)
-            .fetchChuckyCategories(),
-        builder: (context, snapshot) {
-          switch (snapshot.connectionState) {
-            case ConnectionState.none:
-              return Text(
-                'Fetch opportunity data',
-                textAlign: TextAlign.center,
+    return Scaffold(body: _loadChuckyCategories());
+  }
+
+  Widget _loadChuckyCategories() {
+    return FutureBuilder<ChuckCategories>(
+      future: Provider.of<ChuckyProvider>(context, listen: false)
+          .fetchChuckyCategories(),
+      builder: (context, snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.none:
+            return Text(
+              'Fetch opportunity data',
+              textAlign: TextAlign.center,
+            );
+          case ConnectionState.active:
+            return Text('');
+          case ConnectionState.waiting:
+            return Commons.chuckyLoading("Fetching Chucky Categories...");
+          case ConnectionState.done:
+            if (snapshot.hasError) {
+              return Error(
+                errorMessage: "Error retrieving chucky categories.",
               );
-            case ConnectionState.active:
-              return Text('');
-            case ConnectionState.waiting:
-              return Commons.chuckyLoading("Fetching Chucky Categories...");
-            case ConnectionState.done:
-              if (snapshot.hasError) {
-                return Error(
-                  errorMessage: "Error retrieving chucky categories.",
-                );
-              } else {
-                return GetChuckCategories();
-              }
-          }
-          return Commons.chuckyLoading("Fetching Chucky Categories...");
-        },
-      ),
+            } else {
+              return GetChuckCategories();
+            }
+        }
+        return Commons.chuckyLoading("Fetching Chucky Categories...");
+      },
     );
   }
 
