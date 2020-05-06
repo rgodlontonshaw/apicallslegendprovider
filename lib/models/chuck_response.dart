@@ -21,12 +21,12 @@ class ChuckResponse {
       categories: json['categories'] != null
           ? new List<String>.from(json['categories'])
           : null,
-      createdAt: json['created_at'],
-      iconUrl: json['icon_url'],
-      id: json['id'],
-      updatedAt: json['updated_at'],
-      url: json['url'],
-      value: json['value'],
+      createdAt: json['created_at'] ?? '',
+      iconUrl: json['icon_url'] ?? "",
+      id: json['id'] ?? "",
+      updatedAt: json['updated_at'] ?? "",
+      url: json['url'] ?? "",
+      value: json['value'] ?? "",
     );
   }
 
